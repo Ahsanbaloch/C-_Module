@@ -6,21 +6,20 @@
 #    By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/10 19:46:01 by ahsalam           #+#    #+#              #
-#    Updated: 2023/12/10 20:01:35 by ahsalam          ###   ########.fr        #
+#    Updated: 2023/12/11 20:11:09 by ahsalam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  phonebook
 
+NAME = phonebook
 CXX = c++
-
-CXXFLAGS = -Wall -Werror -Wextra -str=c++98
-
-SRC = *.cpp
-
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
+
+$(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
 
 %.o: %.cpp

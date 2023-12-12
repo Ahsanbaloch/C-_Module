@@ -6,7 +6,7 @@
 #    By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/10 14:39:06 by ahsalam           #+#    #+#              #
-#    Updated: 2023/12/10 19:46:24 by ahsalam          ###   ########.fr        #
+#    Updated: 2023/12/11 15:58:39 by ahsalam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXX		= c++
 
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRC = megaphone.cpp
+SRC = *.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
