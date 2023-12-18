@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:58:00 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/18 13:40:56 by ahsalam          ###   ########.fr       */
+/*   Updated: 2023/12/18 14:01:57 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ void PhoneBook::show_data() const
 	int index;
 
 	index = -1;
-	std::cout << "|" << std::setw(10) << "index	|	" << std::setw(10) 
-		<< "First Name	|	" << std::setw(10) 
-		<< " Last Name	|	" << std::setw(10) << "Nick Name" << std::endl;
+/* 	std::cout << "|" << std::setw(10) << "index|" << std::setw(10) 
+		<< "First Name |" << std::setw(10) 
+		<< " Last Name	|	" << std::setw(10) << "Nick Name" << std::endl; */
 	while (++index < 8)
 		std::cout << "|" << std::setw(10) << index << "|" << std::setw(10) 
 		<< truncate(list[index].Get_FName()) << "|" << std::setw(10) 
