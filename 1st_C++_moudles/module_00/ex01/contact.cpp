@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:36:17 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/12 16:28:56 by ahsalam          ###   ########.fr       */
+/*   Updated: 2023/12/17 22:03:53 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ std::string Contact::Get_NName() const
 
 void    Contact::Set_NName(std::string &nick_name) 
 {
-    _Number = nick_name;
+    _Nick_Name = nick_name;
 }
 
 std::string Contact::Get_DSecret() const

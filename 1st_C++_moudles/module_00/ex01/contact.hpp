@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 00:19:37 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/12 16:29:36 by ahsalam          ###   ########.fr       */
+/*   Updated: 2023/12/18 13:37:52 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,12 @@ class Contact
 		void Set_NName(std::string &nick_name);
 		void Set_DSecret(std::string &dark_secret);
 
-
-		void Add();
-		void Search();
-		std::string truncate(std::string str);
-
 	private :
 		std::string	_First_Name;
 		std::string	_Last_Name;
 		std::string	_Number;
 		std::string	_Nick_Name;
 		std::string _Darkest_secret;
-		//int 		_contact_trace;
 };
 
 
