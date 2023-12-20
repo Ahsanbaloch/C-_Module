@@ -6,24 +6,26 @@
 /*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 23:48:19 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/18 13:30:46 by ahsalam          ###   ########.fr       */
+/*   Updated: 2023/12/20 14:18:17 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
+#include <sstream>
 
 void search_data(const PhoneBook &phonebook)
 {
 	phonebook.show_data();
-
-	int i;
-
+	std::string number_string;
+	
 	std::cout << "Enter the list number to view : ";
-	std::cin >> i;
+	std::getline(std::cin, number_string);
+	int i = 0;
 
-	if (i < 0 || i > 7)
-		std::cout << "invalid number(should be.... 0-7)" << std::endl;
-	else 
+	std::istringstream number_stream(number_string);
+	number_stream >> i;
+
+	if (i >= 0 && i <= 7)
 	{
 		Contact list_contact = phonebook.get_data(i);
 		if (list_contact.Get_FName().empty())
@@ -37,6 +39,8 @@ void search_data(const PhoneBook &phonebook)
 			std::cout << "Darkest Secret : " << list_contact.Get_DSecret() << std::endl;
 		}
 	}
+	else
+		std::cout << "invalid number(should be.... 0-7)" << std::endl;
 }
 
 void add_data(PhoneBook &phonebook)
@@ -79,14 +83,17 @@ int main()
 
 	while (1)
     {
-        std::cout << "Choose between (add, search, exit)" << std::endl;
-        std::getline(std::cin, input);
-
-        if (input == "add")
+        std::cout << "Choose between (ADD, SEARCH, EXIT)" << std::endl;
+        if (!std::getline(std::cin, input))
+		{
+			std::cout << "input broken" << std::endl;
+			break;
+		}
+        if (input == "ADD")
             add_data(phonebook);
-        else if (input == "search")
+        else if (input == "SEARCH")
             search_data(phonebook);
-        else if (input == "exit")
+        else if (input == "EXIT")
             break;
         else
             std::cout << "Please choose from the above given choices" << std::endl;

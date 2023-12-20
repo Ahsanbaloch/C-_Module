@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:40:44 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/18 21:34:07 by ahsalam          ###   ########.fr       */
+/*   Updated: 2023/12/20 14:13:31 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,7 @@ void Account::_displayTimestamp()
 	<< "_" << local_time->tm_hour << local_time->tm_min << local_time->tm_sec << "] ";
 }
 
-Account::Account()
-{
-	_accountIndex = 0;
-	_amount = 0;
-	_nbDeposits = 0;
-	_nbWithdrawals = 0;
-}
+Account::Account() {}
 
 int Account::getNbAccounts()
 {
@@ -66,8 +60,6 @@ void Account::displayAccountsInfos()
 
 Account::Account(int initial_deposit) : _amount(initial_deposit)
 {
-	Account();
-	//_amount = initial_deposit;
 	_accountIndex = _nbAccounts;
 	_totalAmount += initial_deposit;
 	_displayTimestamp();
@@ -77,6 +69,10 @@ Account::Account(int initial_deposit) : _amount(initial_deposit)
 
 Account::~Account( void )
 {
+	_nbAccounts--;
+	_totalAmount -= this->_amount;
+	_totalNbDeposits -= this->_nbDeposits;
+	_totalNbWithdrawals -= this->_nbWithdrawals;
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
 	std::cout << "amount" << _amount << ";closed" << std::endl;
@@ -87,12 +83,13 @@ void Account::makeDeposit(int deposit)
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
 	std::cout << "p_amount:" << _amount << ";";
+	_amount += deposit;
+	_nbDeposits++;
+	_totalAmount += deposit;
+	_totalNbDeposits++; 
 	std::cout << "deposit:" << deposit << ";";
 	std::cout << "amount:" << _amount + deposit << ";";
 	std::cout << "nb_deposits:" << ++_nbDeposits << std::endl;
-	_amount += deposit;
-	_totalAmount += deposit;
-	_totalNbDeposits++; 
 }
 
 bool Account::makeWithdrawal(int withdrawal)

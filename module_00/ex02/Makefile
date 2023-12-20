@@ -6,7 +6,7 @@
 #    By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/18 21:23:15 by ahsalam           #+#    #+#              #
-#    Updated: 2023/12/19 00:26:50 by ahsalam          ###   ########.fr        #
+#    Updated: 2023/12/20 14:17:35 by ahsalam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)x
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
