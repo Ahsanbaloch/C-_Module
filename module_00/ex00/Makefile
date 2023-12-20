@@ -21,7 +21,6 @@ SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
 
 all: $(TARGET)
-	@echo "Compiled successfully"
 
 $(TARGET):	$(OBJ)
 	$(CXX)	$(CXXFLAGS)	-o	$(TARGET)	$(OBJ)
