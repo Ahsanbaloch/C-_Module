@@ -26,20 +26,22 @@ int file_process(std::string filename,std::string finder, std::string replace)
 		std::cerr << "Error: Empty string" << std::endl;
 		return (1);
 	}
-	std::ifstream file(filename);
+	std::ifstream file(filename.c_str());
 	if (!file.is_open())
 	{
 		std::cerr << "Error: couldn't open input File:" << filename << std::endl;
 		return (1);
 	}
-/* 	strBuff << file.rdbuf();
+	strBuff << file.rdbuf();
 	std::string inputFileLines = strBuff.str();
 	if (inputFileLines == "")
 	{
 		std::cout << "file is empty." << std::endl; 
 		return (1);
-	} */
-	std::ofstream file2(filename + ".replace");
+	}
+	 file.clear(); //clear EOF flag
+	file.seekg(0, std::ios::beg); // reset position to the beginning of the file
+	std::ofstream file2((filename + ".replace").c_str());
 	if (!file2.is_open())
 	{
 		std::cerr << "Error: couldn't open output File:" << filename << ".replace" << std::endl;
@@ -48,7 +50,6 @@ int file_process(std::string filename,std::string finder, std::string replace)
 	}
 	while (std::getline(file, line))
 	{
-
 		if (finder != replace)
 		{
 			pos = line.find(finder);
