@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 13:54:15 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/25 13:56:57 by ahsalam          ###   ########.fr       */
+/*   Updated: 2023/12/29 14:19:48 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 
 	void attack();
 	void setWeapon(Weapon& type);
+	void setWeapon(Weapon* type);
 };
 
 
