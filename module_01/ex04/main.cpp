@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 18:35:33 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/26 17:12:12 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/12 14:53:24 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <cerrno>   // for errno
+#include <cstring>  // for strerror
 
 void other_file(std::string filename, std::ifstream &file, std::string finder, std::string replace)
 {
@@ -50,6 +52,7 @@ int error_check(std::string filename, std::string finder, std::string replace)
 	if (!file.is_open())
 	{
 		std::cerr << "Error: couldn't open input File:" << filename << std::endl;
+		std::cerr << "System error: " << strerror(errno) << std::endl;
 		return (1);
 	}
 	strBuff << file.rdbuf();
