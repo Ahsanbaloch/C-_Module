@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 15:46:29 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/30 15:17:19 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/16 13:47:16 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ public:
     Fixed();
     ~Fixed();
     Fixed(const Fixed& copy_constructor); // copy constructor
-    Fixed& operator=(const Fixed& assignment_operator); // assignment operator overload
+    Fixed& operator=(const Fixed& assignment_operator); // assignment operator
     
     int getRawBits(void) const;
 };
 
-std::ostream& operator<<(std::ostream& out, const Fixed& fixed);
+//std::ostream& operator<<(std::ostream& out, const Fixed& fixed);
 
 #endif

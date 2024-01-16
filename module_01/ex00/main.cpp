@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 19:38:49 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/24 20:24:15 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/15 21:37:43 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 int main()
 {
     Zombie stack("stack");
-    Zombie *heap = new Zombie("heap");
-    delete heap;
+    Zombie *heap = new Zombie("Bro");
     randomChump("Porsche...");
+    delete heap;
 
     return (0);
 }

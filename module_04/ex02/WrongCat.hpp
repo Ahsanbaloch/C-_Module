@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 17:42:50 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/15 21:31:31 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/08 14:47:18 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/08 18:38:30 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include <iostream>
+#include "WrongAnimal.hpp"
 
-
-class Zombie
+class WrongCat : public WrongAnimal
 {
-private:
-	std::string _name;
-public:
-	//Zombie();
-	Zombie(std::string anme);
-	~Zombie();
-	void announce(void);
-};
 
-void randomChump(std::string name);
+public:
+    WrongCat();
+    ~WrongCat();
+
+    WrongCat(const WrongCat& copy_const);
+    WrongCat &operator=(const WrongCat& assign_op);
+    void makeSound() const;
+};
 
 #endif

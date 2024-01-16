@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 17:42:50 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/15 21:31:31 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/10 17:09:25 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/12 20:16:28 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
 
 #include <iostream>
+#include "ICharacter.hpp"
 
+class ICharacter;
 
-class Zombie
+class AMateria
 {
-private:
-	std::string _name;
-public:
-	//Zombie();
-	Zombie(std::string anme);
-	~Zombie();
-	void announce(void);
-};
+protected:
+	std::string _type_;
 
-void randomChump(std::string name);
+public:
+	AMateria(std::string const & type);
+	virtual ~AMateria();
+
+	AMateria(const AMateria& copy_const);
+	AMateria& operator=(const AMateria& assign_op);
+
+	std::string const & getType() const; //should return the materia type
+
+	virtual AMateria* clone() const = 0;
+	virtual void use(ICharacter& target);
+};
 
 #endif

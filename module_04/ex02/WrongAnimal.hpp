@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 17:42:50 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/15 21:31:31 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/08 16:09:45 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/08 17:35:16 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
 
-
-class Zombie
+class WrongAnimal
 {
-private:
-	std::string _name;
+protected:
+    std::string _type_;
 public:
-	//Zombie();
-	Zombie(std::string anme);
-	~Zombie();
-	void announce(void);
-};
+    WrongAnimal();
+    virtual ~WrongAnimal();
 
-void randomChump(std::string name);
+    WrongAnimal(const WrongAnimal& copy_const);
+    WrongAnimal& operator=(const WrongAnimal& assign_op);
+    void setType(std::string type);
+    std::string getType() const;
+    void makeSound() const;
+};
 
 #endif

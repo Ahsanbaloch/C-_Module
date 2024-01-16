@@ -5,19 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/26 00:44:18 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/15 22:13:43 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/08 17:44:14 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/10 18:43:06 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-int main(void)
+int main()
 {
-	Harl harl;
-	harl.complain("ERROR");
-	harl.complain("DEBUG");
-	harl.complain("INFO");
-	harl.complain("WARNING");
-	return (0);
+	//Animal animal = new dog(); //can't make that becuase of abstract class
+
+	Dog *d = new Dog();
+	Cat *c = new Cat();
+
+	std::cout << "Dog : ";
+	d->makeSound();
+
+	std::cout << "Cat : ";
+	c->makeSound();
+
+	delete(d);
+	delete(c);
+
+	Dog German_shepherd;
+	std::cout << "German Shepherd : ";
+	Animal *dog_breed = &German_shepherd;
+	dog_breed->makeSound(); // check leaks
 }

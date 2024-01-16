@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 17:42:50 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/15 21:31:31 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/13 20:03:10 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/13 20:05:13 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
 
-#include <iostream>
+#include "IMateriaSource.hpp"
 
-
-class Zombie
+class MateriaSource : public IMateriaSource
 {
 private:
-	std::string _name;
+    AMateria* _inventory[4];
 public:
-	//Zombie();
-	Zombie(std::string anme);
-	~Zombie();
-	void announce(void);
+    MateriaSource();
+    ~MateriaSource();
+
+    MateriaSource(const MateriaSource& copy_const);
+    MateriaSource& operator=(const MateriaSource& assign_op);
+
+    void learnMateria(AMateria*);
+    AMateria* createMateria(std::string const & type);
 };
 
-void randomChump(std::string name);
 
 #endif

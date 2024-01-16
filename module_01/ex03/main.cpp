@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 14:02:42 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/29 14:15:24 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/15 21:55:48 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,14 @@
 int main()
 {
 {
+    std::string input;
+    std::cout << "give some input for user" << std::endl;
+    std::getline(std::cin, input);
+    //std::cin >> input;
 Weapon club = Weapon("crude spiked club");
 HumanA bob("Bob", club);
 bob.attack();
-club.setType("some other type of club");
+club.setType(input);
 bob.attack();
 }
 std::cout << "---------------------" << std::endl;

@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 17:42:50 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/15 21:31:31 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/13 19:58:49 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/13 19:58:50 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef ICE_HPP
+#define ICE_HPP
 
-#include <iostream>
+#include "AMateria.hpp"
 
-
-class Zombie
+class Ice : public AMateria
 {
-private:
-	std::string _name;
-public:
-	//Zombie();
-	Zombie(std::string anme);
-	~Zombie();
-	void announce(void);
-};
 
-void randomChump(std::string name);
+public:
+	Ice();
+	~Ice();
+
+	Ice(const Ice& copy_const);
+	Ice& operator=(const Ice& assign_op);
+	AMateria* clone() const;
+	void use(ICharacter& target);
+};
 
 #endif

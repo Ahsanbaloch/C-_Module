@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 00:39:02 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/26 00:44:12 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/15 22:18:16 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,4 @@ void Harl::complain(std::string level)
 			(this->*ptr[i])();
 		i++;
 	}
-}	
+}

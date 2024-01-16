@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 21:02:02 by ahsalam           #+#    #+#             */
-/*   Updated: 2023/12/29 11:16:48 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/15 21:44:39 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int main()
 {
     int i = -1;
 
-    Zombie *zombie = zombieHorder(9, "Porsche > every_car");
-    while(++i < 9)
+    Zombie *zombie = zombieHorde(2, "Porsche > every_car");
+    while (++i < 2)
         zombie[i].announce();
     delete[] zombie;
 
