@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 14:10:22 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/03 16:18:40 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/17 15:43:51 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Bye from FragTrap" << std::endl;
+	std::cout << "Bye from FragTrap Destructor" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& copy_const) : ClapTrap(copy_const)
