@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 14:12:46 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/10 18:36:35 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/18 17:52:13 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ANIMAL_HPP
 
 #include <iostream>
+
+#include "Brain.hpp"
 
 class Animal
 {

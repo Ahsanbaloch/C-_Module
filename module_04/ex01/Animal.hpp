@@ -6,12 +6,14 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 14:12:46 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/07 01:45:54 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/18 17:35:47 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
+
+#include "Brain.hpp"
 
 #include <iostream>
 

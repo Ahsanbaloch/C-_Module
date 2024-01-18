@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 21:30:10 by abenamar          #+#    #+#             */
-/*   Updated: 2024/01/13 01:43:37 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/18 19:38:04 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,38 @@
 #include "MateriaSource.hpp"
 
 int main(void)
+{
+	IMateriaSource *src = new MateriaSource();
+	ICharacter *me = new Character("me");
+	ICharacter *bob = new Character("bob");
+	AMateria *tmp1;
+	AMateria *tmp2;
+
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+
+	tmp1 = src->createMateria("ice");
+	me->equip(tmp1);
+	tmp2 = src->createMateria("cure");
+	me->equip(tmp2);
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+
+	me->unequip(0);
+	me->unequip(1);
+
+	delete tmp1;
+	delete tmp2;
+	delete bob;
+	delete me;
+	delete src;
+
+	return 0;
+}
+
+/* 
+long example
 {
 	IMateriaSource *src = new MateriaSource();
 	MateriaSource *foo;
@@ -51,7 +83,6 @@ int main(void)
 	me->equip(tmp1);
 	tmp2 = src->createMateria("cure");
 	me->equip(tmp2);
-
 	me->use(0, *bob);
 	me->use(1, *bob);
 
@@ -125,3 +156,5 @@ int main(void)
 
 	return 0;
 }
+
+ */

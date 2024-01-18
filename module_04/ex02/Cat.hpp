@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 01:57:46 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/07 02:10:40 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/18 18:48:20 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 class Cat : public Animal
 {
-
+private:
+    Brain *_brain;
 public:
     Cat();
     ~Cat();

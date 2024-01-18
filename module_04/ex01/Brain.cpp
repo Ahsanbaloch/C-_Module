@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 21:30:01 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/09 16:08:36 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/18 17:30:49 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ Brain::~Brain()
 Brain::Brain(const Brain& copy_const)
 {
 	std::cout << "Hello from Brain copy Constructor" << std::endl;
-	*this = copy_const; 
+	for(int i = 0; i < 100; i++)
+		ideas[i] = copy_const.ideas[i];
 }
 
 Brain& Brain::operator=(const Brain& assign_op)
