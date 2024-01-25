@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/05 14:11:39 by ahsalam           #+#    #+#              #
-#    Updated: 2024/01/18 22:06:14 by ahsalam          ###   ########.fr        #
+#    Created: 2024/01/22 17:09:17 by ahsalam           #+#    #+#              #
+#    Updated: 2024/01/22 17:09:41 by ahsalam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Name	=	brain
+Name	=	bureaucrat
 CXX		=	c++
 
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 

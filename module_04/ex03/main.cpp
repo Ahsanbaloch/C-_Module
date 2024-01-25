@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 21:30:10 by abenamar          #+#    #+#             */
-/*   Updated: 2024/01/18 19:38:04 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/18 20:43:09 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int main(void)
 
 	me->unequip(0);
 	me->unequip(1);
+	me->unequip(21);
 
 	delete tmp1;
 	delete tmp2;

@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:18:24 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/08 17:38:22 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/01/18 21:39:18 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ std::string WrongAnimal::getType() const
 
 void WrongAnimal::makeSound() const
 {
-	std::cout << "wrong Animal sound" << std::endl;
+	std::cout << "not cat and dog" << std::endl;
 }

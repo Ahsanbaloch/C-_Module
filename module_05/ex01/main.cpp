@@ -5,33 +5,45 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 17:44:14 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/18 22:16:05 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/23 17:33:58 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/23 20:14:01 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongCat.hpp"
+#include "Form.hpp"
 
 int main()
 {
-	//Animal animal = new dog(); //can't make that becuase of abstract class
+	Bureaucrat b1("Ahsan", 2);
+	Form form("Form A", 2, 2);
+	try
+	{
+		std::cout << b1 << std::endl;
 
-	Dog *d = new Dog();
-	Cat *c = new Cat();
+		std::cout << form << std::endl;
+		b1.signForm(form);
+		//form.beSigned(b1);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	std::cout << "Dog : ";
-	d->makeSound();
+	Bureaucrat b2("Jerry", 14);
+	Form form1("Form B", 15, 13);
+	try
+	{
+		std::cout << form1 << std::endl;
+		b2.signForm(form1);
+	}
+	catch(const Form::GradeTooHighException& e)
+	{
+		std::cerr << e.what();
+	}
+	catch(const Form::GradeTooLowException& e)
+	{
+		std::cerr << e.what();
+	}
 
-	std::cout << "Cat : ";
-	c->makeSound();
-
-	delete(d);
-	delete(c);
-
-	Dog German_shepherd;
-	std::cout << "German Shepherd : ";
-	Animal *dog_breed = &German_shepherd;
-	dog_breed->makeSound(); // check leaks
+	return (0);
 }

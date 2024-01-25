@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/05 14:11:39 by ahsalam           #+#    #+#              #
-#    Updated: 2024/01/18 22:06:14 by ahsalam          ###   ########.fr        #
+#    Created: 2024/01/23 17:36:02 by ahsalam           #+#    #+#              #
+#    Updated: 2024/01/23 17:36:09 by ahsalam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Name	=	brain
+Name	=	form
 CXX		=	c++
 
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 

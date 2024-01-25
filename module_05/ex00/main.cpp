@@ -5,33 +5,43 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 17:44:14 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/18 22:16:05 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/22 21:48:01 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/23 19:56:06 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongCat.hpp"
 
-int main()
+#include "Bureaucrat.hpp"
+
+int main(void)
 {
-	//Animal animal = new dog(); //can't make that becuase of abstract class
+    try
+	{
+		Bureaucrat css("Ahsan", 50);
+		std::cout << css << std::endl;
 
-	Dog *d = new Dog();
-	Cat *c = new Cat();
-
-	std::cout << "Dog : ";
-	d->makeSound();
-
-	std::cout << "Cat : ";
-	c->makeSound();
-
-	delete(d);
-	delete(c);
-
-	Dog German_shepherd;
-	std::cout << "German Shepherd : ";
-	Animal *dog_breed = &German_shepherd;
-	dog_breed->makeSound(); // check leaks
+		//hight grade
+		Bureaucrat css1("Ahsan", 0);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	try
+	{
+		Bureaucrat css("Ahmad", 150);
+		css.increaseGrade();
+		css.decreaseGrade();
+		css.decreaseGrade();
+	}
+	catch(const Bureaucrat::GradeTooHighException& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	catch(const Bureaucrat::GradeTooLowException& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	
+	return (0);
 }
