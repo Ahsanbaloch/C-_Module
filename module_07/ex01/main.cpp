@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:12:40 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/03/25 13:18:29 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/03/25 21:11:12 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void printInt(int  i)
 int main()
 {
 	int arr[] = {1, 2, 3};
-	//iter(arr, sizeof(arr) / sizeof(*arr), printInt);
+	iter(arr, 3, printInt); //instead of 3 we can also use sizeof(arr)/sizeof(arr[0])
     return (0);
 }
