@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 15:59:16 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/03/30 16:03:16 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/03/30 16:12:06 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,22 @@ int main()
 		++it;
 	}
 	std::stack<int> s(mstack);
+
+	/* MutantStack<int> mstack;
+	// Test 1: Check if the stack is empty
+	if (mstack.empty()) {
+	    std::cout << "Stack is empty." << std::endl;
+	} else {
+	    std::cout << "Stack is not empty." << std::endl;
+	}
+
+	// Test 2: Push multiple elements and print the stack
+	for (int i = 0; i < 10; ++i)
+	    mstack.push(i);
+
+	for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); ++it)
+	    std::cout << *it << " ";
+	std::cout << std::endl; */
 	return 0;
+
 }
