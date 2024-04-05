@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RPN.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 22:30:58 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/04/02 23:57:21 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/05 12:26:48 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ void RPN::readData(std::string data)
 			int num1 = _p_num.top();
 			_p_num.pop();
 			_p_num.push(result(num1, num2, data[i]));
+			/* int rslt = result(num1, num2, data[i]);
+			_p_num.push(rslt);
+			std::cout << num1 << " " << data[i] << " " <<  num2 << std::endl;
+			std::cout << "result = " << rslt << std::endl; */
 		}
 		else if (isspace(data[i]))
 			continue ;
