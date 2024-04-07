@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:58:13 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/04/06 22:09:19 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/07 14:07:15 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,26 @@ class PmergeMe
 
 		//vector operations...
 		void printPairs(std::vector<std::pair<unsigned int, unsigned int> > vect_pair);
-		void vectorOperation(std::vector<int> vctr);
+		void fordJohnsonSort(std::vector<int>& vctr);
+		/* void vectorOperation(std::vector<int> vctr);
 		void sortInsidePairs(std::vector<std::pair<unsigned int, unsigned int> > &vect_pair);
 		void extractVector(std::vector<std::pair<unsigned int, unsigned int> > &vect_pair);
 		void organizeVector(std::vector<unsigned int> &sm, std::vector<unsigned int> &lg);
-		void printVector(std::vector<unsigned int> sm);
+		void printVector(std::vector<int> sm); */
 
 		//deque operations...
 		void printPairs(std::deque<std::pair<unsigned int, unsigned int> > dq_pair);
-		void dequeOperation(std::deque<int> dq);
+		/* void dequeOperation(std::deque<int> dq);
 		void sortInsidePairs(std::deque<std::pair<unsigned int, unsigned int> > &dq_pair);
 		void extractDeque(std::deque<std::pair<unsigned int, unsigned int> > &dq_pair);
 		void organizeDeque(std::deque<unsigned int> &sm, std::deque<unsigned int> &lg);
-		void printdeque(std::deque<unsigned int> sm);
+		void printdeque(std::deque<int> sm); */
+		void fordJohnsonSort(std::deque<int>& dq);
 };
+
+//vector Operation
+//sortInsideOperation
+//extractVector
+//organizeVector
 
 #endif
