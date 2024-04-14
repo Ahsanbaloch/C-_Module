@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:38:46 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/27 20:34:42 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/14 19:49:43 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main()
 	try
 	{
 
-		shrubbery = someRandomIntern.makeForm("ShrubberyCreationForm", "Bender");
+		shrubbery = someRandomIntern.makeForm("ShrubberyCreationForm", "");
 		pardon = someRandomIntern.makeForm("presidential pardon" , "Jorah");
 	}
 	catch (const Bureaucrat::GradeTooLowException &e)

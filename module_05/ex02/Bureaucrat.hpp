@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/22 17:11:01 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/04/14 17:09:07 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/25 12:29:15 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/04/14 19:41:23 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {
@@ -32,6 +35,8 @@ public:
     void setGrade(int grade);
     void increaseGrade();
     void decreaseGrade();
+    void signForm(AForm &form);
+    void executeForm(AForm const &form); // write this function
 
     class GradeTooHighException : public std::exception
     {

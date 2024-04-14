@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/22 21:16:06 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/04/14 18:02:54 by ahsalam          ###   ########.fr       */
+/*   Created: 2024/01/25 14:18:35 by ahsalam           #+#    #+#             */
+/*   Updated: 2024/01/25 18:19:19 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,21 +73,32 @@ void Bureaucrat::decreaseGrade()
 	std::cout << "\033[32mGrade decreases to " << _grade << "\033[0m" << std::endl;
 }
 
-void Bureaucrat::signForm(Form &form)
+void Bureaucrat::signForm(AForm &form)
 {
-	try 
-	{
+	 try {
 	 	form.beSigned(*this);
 		std::cout << "\033[32m" << _name << " signs " << form.getName() << "\033[0m" << std::endl;
-	}
-	catch (const Form::GradeTooHighException &e)
+
+	 }
+	catch (const AForm::GradeTooHighException &e)
 	{
 		std::cerr << "\033[31m" << _name << " can't sign " << form.getName() << " because " << e.what() << "\033[0m" << std::endl;
 	}
-	catch (const Form::GradeTooLowException &e)
+	catch (const AForm::GradeTooLowException &e)
 	{
 		std::cerr << "\033[31m" << _name << " can't sign " << form.getName() << " because " << e.what() << "\033[0m" << std::endl;
 	} 
+}
+
+void Bureaucrat::executeForm(AForm const &form)
+{
+	if (_grade > form.getExecuteGrade())
+		throw AForm::GradeTooLowException();
+	else
+	{
+		std::cout << "\033[32m" << _name << " executed " << form.getName() << "\033[0m" << std::endl;
+		form.execute(*this);
+	}
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
