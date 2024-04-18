@@ -6,11 +6,15 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:23:23 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/27 20:09:16 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/18 14:33:31 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
+
+Intern::Intern() {}
+
+Intern::~Intern() {}
 
 Intern::Intern(const Intern & copy_const)
 {

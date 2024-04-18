@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:23:33 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/04/14 18:11:21 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/18 11:31:49 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ Form::~Form() {}
 Form::Form(const Form& copy_const)
 : _name(copy_const._name), _signed(copy_const._signed), _grade_sign(copy_const._grade_sign), _grade_execute(copy_const._grade_execute)
 {
-	_signed = copy_const._signed;
-
 }
 
 Form &Form::operator=(const Form& assign_op)
@@ -63,7 +61,7 @@ void Form::setStatus(bool status)
 	_signed = status;
 }
 
-void Form::beSigned(Bureaucrat &bureacrat)
+void Form::beSigned(Bureaucrat const &bureacrat)
 {
 	if (bureacrat.getGrade() <= _grade_sign)
 		setStatus(true);

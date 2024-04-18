@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 17:49:05 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/26 21:43:20 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/17 18:15:54 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ void ShrubberyCreationForm::makeTree() const
            << "  ^^^^^^^^^^^^^^^\n"
            << " ^^^^^^^^^^^^^^^^^\n"
            << "^^^^^^^^^^^^^^^^^^^\n"
-           << "         ||\n"
-           << "         ||\n"
-		   << "         ||\n"
-           << "         ||\n";
+           << "        ||\n"
+           << "        ||\n"
+		   << "        ||\n"
+           << "        ||\n";
 		file_write.close();
     std::cout << "\033[32mFile is created in Shrubbery Form.... \033[0m" << std::endl;
 }

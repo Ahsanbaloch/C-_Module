@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:08:01 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/26 21:40:41 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/17 18:29:02 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ShrubberyCreationForm : public AForm
 private:
     std::string _target;
 public:
-    ShrubberyCreationForm(std::string title);
+    ShrubberyCreationForm(std::string target);
     ~ShrubberyCreationForm();
 
     ShrubberyCreationForm(const ShrubberyCreationForm & copy_const);

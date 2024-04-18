@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:04:24 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/04/14 18:06:41 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/18 11:23:05 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
 	int getExecuteGrade() const;
 
 	void setStatus(bool status);
-	void beSigned(Bureaucrat &bureacrat);
+	void beSigned(Bureaucrat const &bureacrat);
 
 	class GradeTooHighException : public std::exception
 	{

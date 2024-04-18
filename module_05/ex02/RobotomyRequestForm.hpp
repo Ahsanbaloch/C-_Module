@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:06:54 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/26 21:40:49 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/18 14:29:36 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define ROBOTOMYREQUESTFORM_HPP
 
 #include "AForm.hpp"
+#include <ctime>
+#include <cstdlib>
 
 class RobotomyRequestForm : public AForm
 {

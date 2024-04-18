@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:18:12 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/27 20:32:28 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/18 13:21:49 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,7 @@ AForm::~AForm() {}
 
 AForm::AForm(const AForm& copy_const)
 : _name(copy_const._name), _signed(copy_const._signed), _grade_sign(copy_const._grade_sign), _grade_execute(copy_const._grade_execute)
-{
-	_signed = copy_const._signed;
-
-}
+{}
 
 AForm &AForm::operator=(const AForm& assign_op)
 {
@@ -96,7 +93,7 @@ const char *AForm::FormNotSignedException::what() const throw()
 
 std::ostream& operator<<(std::ostream& output, const AForm& Aform)
 {
-	output << "\033[33m" << Aform.getName() << "'s status is " << Aform.getStatus() << " and grade which will be signed is "
+	output << "\033[33m" << Aform.getName() << "'s status is " << std::boolalpha << Aform.getStatus() << " and grade which will be signed is "
 	<< Aform.getSignGrade() << " and grade which are required to execute is " << Aform.getExecuteGrade() << "\033[0m" ;
 	return (output);
 }

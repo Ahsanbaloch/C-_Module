@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:01:08 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/26 21:43:25 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/18 14:29:46 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,14 @@ void RobotomyRequestForm::setTarget(std::string target)
     _target = target;
 }
 
-static int robot_stats = 0;
-
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
+    std::srand(std::time(0));
     if (executor.getGrade() > getExecuteGrade())
         throw (Bureaucrat::GradeTooLowException());
     else if (getStatus() == false)
         throw (FormNotSignedException());
-    else if (++robot_stats % 2)
+    else if (std::rand() % 2) // change random number generator
         std::cout << "\033[32mDRRRRRRRRR....... " << getTarget() << " has been robotomized\033[0m" << std::endl;
     else
         std::cout <<"\033[31mhas been failed...\033[0m" << std::endl;

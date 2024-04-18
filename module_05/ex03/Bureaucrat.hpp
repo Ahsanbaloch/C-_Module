@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:29:15 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/26 14:52:43 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/18 11:33:36 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
     void increaseGrade();
     void decreaseGrade();
     void signForm(AForm &form);
-    void executeForm(AForm const &form); // write this function
+    void executeForm(AForm const &form);
 
     class GradeTooHighException : public std::exception
     {

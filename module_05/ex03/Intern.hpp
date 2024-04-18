@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 17:16:07 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/01/27 20:35:17 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/18 14:33:35 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Intern
 private:
     /* data */
 public:
-    Intern() {};
-    ~Intern() {};
+    Intern();
+    ~Intern();
     Intern(const Intern & copy_const);
     Intern &operator=(const Intern &assign_op);
 
