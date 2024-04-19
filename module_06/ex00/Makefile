@@ -6,11 +6,11 @@
 #    By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 17:09:17 by ahsalam           #+#    #+#              #
-#    Updated: 2024/03/24 11:57:51 by ahsalam          ###   ########.fr        #
+#    Updated: 2024/04/19 08:39:04 by ahsalam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Name	=	cast
+Name	=	convert
 CXX		=	c++
 
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 

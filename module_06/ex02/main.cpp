@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 15:56:35 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/03/24 17:24:25 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/19 16:29:30 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ Base* generate()
         case 2:
             return new C;
         default:
-            return nullptr;
+            return NULL;
     }
-    return nullptr;
+    return NULL;
 }
 
 void identify(Base* ptr)
@@ -48,23 +48,23 @@ void identify(Base& ref)
     {
 		A& a = dynamic_cast<A&>(ref); 
 		(void)a;
-    	std::cout << "Pointer type A" << std::endl;
+    	std::cout << "Ref type A" << std::endl;
     }
-    catch(std::bad_cast&) {}
+    catch(std::exception&) {}
     try
     {
 		B &b  = dynamic_cast<B&>(ref); 
 		(void)b;
-		std::cout << "Pointer type B" << std::endl;
+		std::cout << "Ref type B" << std::endl;
     }
-    catch(std::bad_cast&) {}
+    catch(std::exception&) {}
     try
     {
 		C &c = dynamic_cast<C&>(ref); 
 		(void)c;
-		std::cout << "Pointer type C" << std::endl;
+		std::cout << "Ref type C" << std::endl;
     }
-    catch(std::bad_cast&) {}
+    catch(std::exception&) {}
 }
 
 int main()

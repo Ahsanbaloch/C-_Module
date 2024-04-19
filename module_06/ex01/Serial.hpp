@@ -6,7 +6,7 @@
 /*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 14:52:41 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/03/24 15:03:40 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/19 16:23:08 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 #define SERIAL_HPP
 
 #include <iostream>
+#include <stdint.h>
 
 struct Data {
     int i;
     double d;
+    /* void print() const {
+        std::cout << "int: " << i << ", double: " << d << std::endl;
+    } */
 };
 
 class Serial
