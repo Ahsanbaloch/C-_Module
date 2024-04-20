@@ -1,7 +1,32 @@
 #include <iostream>
 #include "Array.hpp"
+#include <stdlib.h>
 
-#define MAX_VAL 750
+int main() {
+    // Create an Array of 10 ints
+    Array<int> arr(10);
+
+    // Set some values
+    for (unsigned int i = 0; i < arr.size(); ++i) {
+        arr[i] = i * 2;
+    }
+
+    // Read the values back
+    for (unsigned int i = 0; i < arr.size(); ++i) {
+        std::cout << "arr[" << i << "] = " << arr[i] << std::endl;
+    }
+
+    // Try to access an out-of-bounds index
+    try {
+        std::cout << "arr[10] = " << arr[10] << std::endl;
+    } catch (const std::out_of_range& e) {
+        std::cout << "Caught exception: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
+
+/* #define MAX_VAL 750
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
@@ -50,4 +75,4 @@ int main(int, char**)
     }
     delete [] mirror;//
     return 0;
-}
+} */
