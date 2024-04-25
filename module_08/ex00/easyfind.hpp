@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 21:06:47 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/03/29 21:18:53 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/25 16:13:53 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 #define EASYFIND_HPP
 
 #include <algorithm>
-#include <exception>
 #include <vector>
 #include <iostream>
 
 template<typename T>
-typename T::iterator easyfind(T& container, int num)
+typename T::iterator easyFind(T& container, int num)
 {
 	typename T::iterator it = std::find(container.begin(), container.end(), num);
 	if (it == container.end())
-		throw std::runtime_error("Value not found");
+		std::cout << "Value isn't in there... schade!!!" << std::endl;
+	else
+		std::cout << "Found the value!!! :)" << std::endl;
 	return it;
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 15:59:16 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/03/30 16:12:06 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/25 16:41:23 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	MutantStack<int> mstack;
+	/* MutantStack<int> mstack;
 	mstack.push(5);
 	mstack.push(17);
 	std::cout << mstack.top() << std::endl;
@@ -34,9 +34,9 @@ int main()
 		std::cout << *it << std::endl;
 		++it;
 	}
-	std::stack<int> s(mstack);
+	std::stack<int> s(mstack); */
 
-	/* MutantStack<int> mstack;
+	MutantStack<int> mstack;
 	// Test 1: Check if the stack is empty
 	if (mstack.empty()) {
 	    std::cout << "Stack is empty." << std::endl;
@@ -50,7 +50,7 @@ int main()
 
 	for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); ++it)
 	    std::cout << *it << " ";
-	std::cout << std::endl; */
+	std::cout << std::endl;
 	return 0;
 
 }

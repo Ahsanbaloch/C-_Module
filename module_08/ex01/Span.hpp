@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 13:33:03 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/03/30 14:14:07 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/25 16:26:18 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <algorithm>
 #include <stdexcept>
 #include <iostream>
+#include <cstdlib> // for rand() and srand()
+#include <ctime>
 
 class Span
 {
