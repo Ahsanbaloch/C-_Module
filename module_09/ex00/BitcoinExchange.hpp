@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 14:41:01 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/04/01 16:10:32 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/28 16:15:11 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <map>
 #include <fstream>
 #include <sstream>
+#include <iomanip>
 
 class BitcoinExchange {
 	private:

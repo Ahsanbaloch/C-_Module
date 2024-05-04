@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 14:51:58 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/04/01 18:14:43 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/04/28 16:16:04 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void BitcoinExchange::data_csv_file()  //check the error for basic_string
 void BitcoinExchange::read_data_input(std::string file_name)
 {
 	std::string fileContent;
-	std::ifstream file(file_name);
+	std::ifstream file(file_name.c_str());
 	if (file.is_open())
 	{
 		while (std::getline(file, fileContent))

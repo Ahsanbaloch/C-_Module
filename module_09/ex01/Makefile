@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+         #
+#    By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 17:09:17 by ahsalam           #+#    #+#              #
-#    Updated: 2024/04/02 21:24:13 by ahsalam          ###   ########.fr        #
+#    Updated: 2024/04/28 16:17:32 by ahsalam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Name	=	pn
+Name	=	rpn
 CXX		=	c++
 
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 
