@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PmergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahsalam <ahsalam@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: ahsalam <ahsalam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:39:48 by ahsalam           #+#    #+#             */
-/*   Updated: 2024/05/04 20:32:49 by ahsalam          ###   ########.fr       */
+/*   Updated: 2024/05/05 14:44:37 by ahsalam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ PmergeMe::PmergeMe(int argc, char *argv[])
 		input.push_back(num);
 		dq.push_back(num);
 	}
+	std::vector<int> sortedInput = input;
+    std::sort(sortedInput.begin(), sortedInput.end());
+    if (input == sortedInput)
+        throw std::runtime_error("Input numbers are already sorted...");
 	printVector("Before : ", input);
 
    	clock_t start = clock();

@@ -69,7 +69,11 @@
         "locale": "cpp",
         "mutex": "cpp",
         "ratio": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "__tree": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "climits": "cpp"
     },
     "42header.email": "ahsalam@student.42wolfsburg.de",
     "42header.username": "ahsalam"
